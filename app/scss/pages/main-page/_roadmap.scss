@@ -438,7 +438,7 @@
         }
 
         &:nth-child(even) {
-            background: transparent;
+
             & .roadmap__block {
                 &.aos-animate .roadmap__block--arrow {
                     animation: arrowFadeInLeft 0.5s ease 0.7s 1 normal forwards;
