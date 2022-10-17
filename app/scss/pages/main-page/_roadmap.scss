@@ -401,6 +401,26 @@
         @include _769 {
             display: none;
         }
+
+        &--item {
+            display: grid;
+            & > * {
+                grid-area: 1/1;
+
+                &:nth-child(1) {
+                    clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+                    transition: clip-path 1s ease-in-out;
+                }
+
+                &:nth-child(2) {
+                    
+                }
+            }
+
+            &.aos-animate > *:nth-child(1) {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+        }
     }
 
     // .roadmap__list
