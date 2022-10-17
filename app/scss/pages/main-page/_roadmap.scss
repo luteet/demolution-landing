@@ -317,7 +317,7 @@
 
         min-height: 100%; width: 30px;
         @include _769 {
-            width: 15%;
+            width: 60px;
         }
 
         margin-inline: auto;
@@ -328,48 +328,116 @@
         display: none;
 
         @include _769 {
-            display: block;
+            display: grid;
+            & > * {
+                grid-area: 1/1;
+            }
+        }
+
+        &.aos-animate &--loaded-body {
+            //height: calc(var(--arrow-height) - 35px);
+            height: 90%;
+        }
+
+        &--loaded {
+            /* background: transparent;
+            clip-path: url(#roadmap-arrow-alt);
+            
+            position: absolute;
+            left: 0%; top: 0;
+            transform: translate(0%,0) rotate(180deg);
+            width: 60px; height: 100%;
+            display: flex;
+            align-items: flex-end;
+
+            opacity: .46; */
+
+            &-body {
+                /* width: 100%; height: 0;
+                position: relative;
+                background: white;
+
+                transition: height 1.5s ease-in-out; */
+            }
         }
 
         // .roadmap__arrow-line--elem
+
+        &--waves {
+            
+            & svg {
+                position: absolute;
+                left: 0; top: 1px;
+                transform: translate(0,-100%);
+                width: 100%; height: 75px;
+                
+            }
+
+            z-index: 2;
+        }
+        
+        &--arrow-alt {
+            //transform: translate(2px, 0) scale(1.19);
+
+            /* transform: translate(-1px, 0) scale(1.35, 1.115);
+            @include _992 {
+                transform: translate(-1px, 0) scale(1.35, 1.19);
+            } */
+        }
+
+        &.aos-animate &--svg._loaded {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        &--svg {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+            min-width: 100%; height: 100%;
+            
+            &._loaded {
+                clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+            }
+
+            opacity: .46;
+            transition: opacity .2s ease-in-out, clip-path 2s ease-in-out;
+
+            /* &:nth-child(1) {
+                opacity: 0.46;
+                clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+            }
+
+            &:nth-child(2) {
+                opacity: 0.46;
+            } */
+
+        }
+
+        &--loaded {
+            height: 100%; width: 100%;
+        }
+
+        &--loaded-svg {
+            height: 100%; width: 100%;
+            & rect {
+                height: 80%;
+            }
+        }
 
         &--elem {
             position: absolute;
             left: 50%;
             transform: translate(-50%,0);
-            width: 50%;
+            width: 50%; height: 100%;
 
-            & svg {
-                position: absolute;
-                left: 50%; top: 50%;
-                transform: translate(-50%,-50%);
-                min-width: 100%; height: 100%;
-
-                transition: opacity .2s ease-in-out, clip-path 1.5s ease-in-out;
-
-                &:nth-child(1) {
-                    opacity: 0.46;
-                    clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
-                }
-
-                &:nth-child(2) {
-                    opacity: 0.46;
-                }
-
-            }
-
-            &.aos-animate svg {
+            /* &.aos-animate svg {
                 &:nth-child(1) {
                     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
                 }
-
-                /* &:nth-child(2) {
-                    opacity: 0;
-                } */
-            }
+            } */
             
 
-            &:nth-child(1) {
+            /* &:nth-child(1) {
                 height: 25%;
                 top: 0;
                 //background: #fff;
@@ -383,7 +451,7 @@
             &:nth-child(3) {
                 top: 75%;
                 height: 25%;
-            }
+            } */
         }
     }
 
@@ -407,19 +475,19 @@
             & > * {
                 grid-area: 1/1;
 
-                &:nth-child(1) {
+                /* &:nth-child(1) {
                     clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
                     transition: clip-path 1s ease-in-out;
-                }
+                } */
 
-                &:nth-child(2) {
+                /* &:nth-child(2) {
                     
-                }
+                } */
             }
 
-            &.aos-animate > *:nth-child(1) {
+            /* &.aos-animate > *:nth-child(1) {
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            }
+            } */
         }
     }
 

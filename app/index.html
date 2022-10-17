@@ -472,7 +472,7 @@
             <h2 class="roadmap__title _title" data-aos="fade-in">
                 ROADMAP
             </h2>
-            <div class="roadmap__inner">
+            <div class="roadmap__inner" data-start-date="9/1/2022" data-end-date="11/1/2022" style="--arrow-height: 55%;">
                 <div class="roadmap__mob-arrow-line">
                     <div class="roadmap__mob-arrow-line--item" data-aos="fade-in">
                         <svg width="26" height="162" viewBox="0 0 26 162" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -528,35 +528,84 @@
                     </div>
                 </div>
                 <div class="roadmap__wrapper">
-                    <div class="roadmap__arrow-line">
-                       <!--  <svg width="47" height="603" viewBox="0 0 47 603" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.499994 135.299L0.499975 1.7436L23.1391 25.3461L23.5 25.7223L23.8608 25.3461L46.5 1.74359L46.5 135.299L23.5 159.278L0.499994 135.299Z" stroke="white" stroke-opacity="0.46"/>
-                            <path d="M0.499998 428.299L0.499974 161.244L23.1391 184.846L23.5 185.222L23.8608 184.846L46.5 161.244L46.5 428.299L23.5 452.278L0.499998 428.299Z" stroke="white" stroke-opacity="0.46"/>
-                            <path d="M0.499998 577.799L0.499987 454.245L23.1391 477.847L23.5 478.223L23.8608 477.847L46.5 454.245L46.5 577.799L23.5 601.778L0.499998 577.799Z" stroke="white" stroke-opacity="0.46"/>
-                        </svg> -->
-                        <div class="roadmap__arrow-line--elem" data-aos="fill-arrow">
-                            <svg width="47" height="160" viewBox="0 0 47 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="roadmap__arrow-line" data-aos="arrow-start">
+                        <svg>
+                            <clipPath id="roadmap-arrow">
                                 <path d="M0.499994 135.299L0.499975 1.7436L23.1391 25.3461L23.5 25.7223L23.8608 25.3461L46.5 1.74359L46.5 135.299L23.5 159.278L0.499994 135.299Z" fill="white" stroke="white"/>
+                                <path d="M0.499998 428.299L0.499974 161.244L23.1391 184.846L23.5 185.222L23.8608 184.846L46.5 161.244L46.5 428.299L23.5 452.278L0.499998 428.299Z" fill="white" stroke="white"/>
+                                <path d="M0.499998 577.799L0.499987 454.245L23.1391 477.847L23.5 478.223L23.8608 477.847L46.5 454.245L46.5 577.799L23.5 601.778L0.499998 577.799Z" fill="white" stroke="white"/>
+                            </clipPath>
+                        </svg>
+                        <svg style="position: absolute; width: 100%; height: 100%;" viewBox="0 0 47 603">
+                            <clipPath id="roadmap-arrow-alt" class="roadmap__arrow-line--arrow-alt">
+                                <path d="M46.5 467.701L46.5 601.256L23.8609 577.654L23.5 577.278L23.1392 577.654L0.500019 601.256L0.5 467.701L23.5 443.722L46.5 467.701Z" fill="white"/>
+                                <path d="M46.5 174.701V441.756L23.8608 418.154L23.5 417.778L23.1392 418.154L0.500007 441.756L0.5 174.701L23.5 150.722L46.5 174.701Z" fill="white"/>
+                                <path d="M46.5 25.201V148.755L23.8608 125.153L23.5 124.777L23.1392 125.153L0.50001 148.755L0.5 25.201L23.5 1.22236L46.5 25.201Z" fill="white"/>
+                            </clipPath>
+                        </svg>
+                        <div class="roadmap__arrow-line--bar">
+                            <svg class="roadmap__arrow-line--svg" viewBox="0 0 47 603">
+                                <path d="M0.499994 135.299L0.499975 1.7436L23.1391 25.3461L23.5 25.7223L23.8608 25.3461L46.5 1.74359L46.5 135.299L23.5 159.278L0.499994 135.299Z" fill="transparent" stroke="white"/>
+                                <path d="M0.499998 428.299L0.499974 161.244L23.1391 184.846L23.5 185.222L23.8608 184.846L46.5 161.244L46.5 428.299L23.5 452.278L0.499998 428.299Z" fill="transparent" stroke="white"/>
+                                <path d="M0.499998 577.799L0.499987 454.245L23.1391 477.847L23.5 478.223L23.8608 477.847L46.5 454.245L46.5 577.799L23.5 601.778L0.499998 577.799Z" fill="transparent" stroke="white"/>
                             </svg>
-                            <svg width="47" height="160" viewBox="0 0 47 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.499994 135.299L0.499975 1.7436L23.1391 25.3461L23.5 25.7223L23.8608 25.3461L46.5 1.74359L46.5 135.299L23.5 159.278L0.499994 135.299Z" stroke="white"/>
+                            
+                            <svg class="roadmap__arrow-line--svg _loaded" width="47" height="603" viewBox="0 0 47 603" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <clipPath id="test" class="roadmap__arrow-line--arrow-alt">
+                                    <path d="M0.499994 135.299L0.499975 1.7436L23.1391 25.3461L23.5 25.7223L23.8608 25.3461L46.5 1.74359L46.5 135.299L23.5 159.278L0.499994 135.299Z" stroke="white"/>
+                                    <path d="M0.499998 428.299L0.499974 161.244L23.1391 184.846L23.5 185.222L23.8608 184.846L46.5 161.244L46.5 428.299L23.5 452.278L0.499998 428.299Z" stroke="white"/>
+                                    <path d="M0.499998 577.799L0.499987 454.245L23.1391 477.847L23.5 478.223L23.8608 477.847L46.5 454.245L46.5 577.799L23.5 601.778L0.499998 577.799Z" stroke="white"/>
+                                </clipPath>
+                                <g clip-path="url(#test)">
+                                    <ellipse class="ellipse _1" rx="40" ry="35" cx="20" cy="78%" fill="#9A9A9A"/>
+                                    <ellipse class="ellipse _2" rx="40" ry="30" cx="20" cy="78%" fill="#FFF"/>
+                                </g>
+                                <rect class="rect" width="100%" height="80%" fill="#FFF" clip-path="url(#test)"/>
                             </svg>
+                            <style>
+                                @keyframes rotate {
+                                    0% {
+                                        transform: rotate(0deg);
+                                    }
+                                    99% {
+                                        transform: rotate(360deg);
+                                    }
+                                    100% {
+                                        transform: rotate(361deg);
+                                    }
+                                }
+                                .ellipse {
+                                    transform-box: fill-box;
+                                    transform-origin: center;
+                                    animation: rotate 10s linear 0s infinite normal forwards;
+                                }
+                            </style>
+                            <!-- <svg style="width: 100%; height: 100%; position: absolute;" class="test">
+                                
+                            </svg> -->
+                            <!-- <style>
+                                .test {
+                                    clip-path: url(#roadmap-arrow);
+                                }
+                            </style> -->
                         </div>
-                        <div class="roadmap__arrow-line--elem" data-aos="fill-arrow">
-                            <svg width="47" height="293" viewBox="0 0 47 293" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.499998 268.299L0.499974 1.24356L23.1391 24.8461L23.5 25.2223L23.8608 24.8461L46.5 1.24356L46.5 268.299L23.5 292.278L0.499998 268.299Z" fill="white" stroke="white"/>
-                            </svg>
-                            <svg width="47" height="293" viewBox="0 0 47 293" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.499998 268.299L0.499974 1.24356L23.1391 24.8461L23.5 25.2223L23.8608 24.8461L46.5 1.24356L46.5 268.299L23.5 292.278L0.499998 268.299Z" stroke="white"/>
-                            </svg>
-                        </div>
-                        <div class="roadmap__arrow-line--elem" data-aos="fill-arrow">
-                            <svg width="47" height="150" viewBox="0 0 47 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.499998 124.799L0.499987 1.24468L23.1391 24.8472L23.5 25.2234L23.8608 24.8472L46.5 1.24467L46.5 124.799L23.5 148.778L0.499998 124.799Z" fill="white" stroke="white"/>
-                            </svg>
-                            <svg width="47" height="150" viewBox="0 0 47 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.499998 124.799L0.499987 1.24468L23.1391 24.8472L23.5 25.2234L23.8608 24.8472L46.5 1.24467L46.5 124.799L23.5 148.778L0.499998 124.799Z" stroke="white"/>
-                            </svg>
+                        <div class="roadmap__arrow-line--loaded">
+                            <div class="roadmap__arrow-line--loaded-body">
+                                
+                                <!-- <div class="roadmap__arrow-line--waves">
+                                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+                                        <defs>
+                                            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                                        </defs>
+                                        <g class="parallax">
+                                            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                                            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                                            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                                            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                                        </g>
+                                    </svg>
+                                </div> -->
+                            </div>
                         </div>
                     </div>
                     <ul class="roadmap__list">

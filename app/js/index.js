@@ -215,3 +215,34 @@ AOS.init({
     easing: 'ease-in-out',
     offset: 50
 });
+
+function roadmapArrow() {
+
+    let roadmapInner = document.querySelector('.roadmap__inner'),
+        dateStart = roadmapInner.dataset.startDate,
+        dateEnd = roadmapInner.dataset.endDate,
+        currentDate = new Date(),
+        daysLength, currentProgress;
+
+    dateStart = new Date(dateStart);
+    dateEnd = new Date(dateEnd);
+    
+    var timeDiff = Math.abs(dateStart.getTime() - dateEnd.getTime());
+    currentProgress = Math.abs(dateStart.getTime() - currentDate.getTime());
+    daysLength = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    currentProgress = Math.ceil(currentProgress / (1000 * 3600 * 24));
+
+    let result = currentProgress / daysLength * 100 + '%';
+
+    roadmapInner.style.setProperty('--arrow-height', result);
+
+    roadmapInner.querySelectorAll('.ellipse').forEach(ellipse => {
+        ellipse.setAttribute('cy', result)
+        //console.log(ellipse)
+    })
+
+    roadmapInner.querySelector('.rect').setAttribute('height', result)
+
+}
+
+roadmapArrow();
