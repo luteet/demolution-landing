@@ -336,7 +336,7 @@
 
         &.aos-animate &--loaded-body {
             //height: calc(var(--arrow-height) - 35px);
-            height: 90%;
+            //height: 90%;
         }
 
         &--loaded {
@@ -456,9 +456,7 @@
     }
 
     &__mob-arrow-line {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        
 
         position: absolute;
         left: 0; top: 0;
@@ -468,6 +466,22 @@
 
         @include _769 {
             display: none;
+        }
+
+        & svg {
+            width: 100%; height: 100%;
+        }
+
+        &--bar {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+        }
+
+        &--loaded {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
         }
 
         &--item {
