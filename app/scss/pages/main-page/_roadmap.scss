@@ -350,7 +350,7 @@
             display: flex;
             align-items: flex-end;
 
-            opacity: .46; */
+            opacity: .7; */
 
             &-body {
                 /* width: 100%; height: 0;
@@ -386,7 +386,7 @@
         }
 
         &.aos-animate &--svg._loaded {
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% calc(var(--arrow-height) + 10%), 0 calc(var(--arrow-height) + 10%));
         }
 
         &--svg {
@@ -399,16 +399,16 @@
                 clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
             }
 
-            opacity: .46;
+            opacity: 1;
             transition: opacity .2s ease-in-out, clip-path 2s ease-in-out;
 
             /* &:nth-child(1) {
-                opacity: 0.46;
+                opacity: 0.7;
                 clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
             }
 
             &:nth-child(2) {
-                opacity: 0.46;
+                opacity: 0.7;
             } */
 
         }
@@ -462,7 +462,7 @@
         left: 0; top: 0;
         width: 30px; min-height: 100%;
 
-        opacity: .46;
+        opacity: 1;
 
         @include _769 {
             display: none;

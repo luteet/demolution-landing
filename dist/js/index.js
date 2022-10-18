@@ -232,16 +232,16 @@ function roadmapArrow() {
     daysLength = Math.ceil(timeDiff / (1000 * 3600 * 24));
     currentProgress = Math.ceil(currentProgress / (1000 * 3600 * 24));
 
-    let result = currentProgress / daysLength * 100 + '%';
+    let result = currentProgress / daysLength * 100;
 
-    roadmapInner.style.setProperty('--arrow-height', result);
+    roadmapInner.style.setProperty('--arrow-height', result + '%');
 
     roadmapInner.querySelectorAll('.ellipse').forEach(ellipse => {
-        ellipse.setAttribute('cy', result)
+        ellipse.setAttribute('cy', result - 5 + '%')
         //console.log(ellipse)
     })
 
-    roadmapInner.querySelector('.rect').setAttribute('height', result)
+    roadmapInner.querySelector('.rect').setAttribute('height', result + '%')
 
 }
 
