@@ -237,7 +237,20 @@ function roadmapArrow() {
     roadmapInner.style.setProperty('--arrow-height', result + '%');
 
     roadmapInner.querySelectorAll('.ellipse').forEach(ellipse => {
-        ellipse.setAttribute('cy', result - 10 + '%')
+        
+        if(ellipse.classList.contains('_mob')) {
+            ellipse.setAttribute('cy', result - 5 + '%')
+            if(ellipse.classList.contains('_2')) {
+                ellipse.setAttribute('cy', result - 4.5 + '%')
+            }
+        } else {
+            ellipse.setAttribute('cy', result - 13 + '%')
+            if(ellipse.classList.contains('_2')) {
+                ellipse.setAttribute('cy', result - 12.5 + '%')
+            }
+        }
+
+        
         //console.log(ellipse)
     })
 
