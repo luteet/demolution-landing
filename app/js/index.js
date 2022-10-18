@@ -237,11 +237,13 @@ function roadmapArrow() {
     roadmapInner.style.setProperty('--arrow-height', result + '%');
 
     roadmapInner.querySelectorAll('.ellipse').forEach(ellipse => {
-        ellipse.setAttribute('cy', result - 5 + '%')
+        ellipse.setAttribute('cy', result - 10 + '%')
         //console.log(ellipse)
     })
 
-    roadmapInner.querySelector('.rect').setAttribute('height', result + '%')
+    roadmapInner.querySelectorAll('.rect').forEach(rect => {
+        rect.setAttribute('height', result + '%')
+    })
 
 }
 
