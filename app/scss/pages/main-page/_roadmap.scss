@@ -338,7 +338,7 @@
 
         display: none;
 
-        opacity: .7;
+        opacity: .8;
 
         @include _769 {
             display: grid;
@@ -358,8 +358,6 @@
                 width: 100%; height: 75px;
                 
             }
-
-            
 
             z-index: 2;
         }
@@ -412,7 +410,7 @@
         left: 0; top: 0;
         width: 30px; min-height: 100%;
 
-        opacity: 1;
+        opacity: .8;
 
         @include _769 {
             display: none;
