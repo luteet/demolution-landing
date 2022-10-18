@@ -338,6 +338,8 @@
 
         display: none;
 
+        opacity: .7;
+
         @include _769 {
             display: grid;
             & > * {
@@ -363,7 +365,7 @@
         }
 
         &.aos-animate &--svg._loaded {
-            clip-path: polygon(0 0, 100% 0, 100% calc(var(--arrow-height) + 10%), 0 calc(var(--arrow-height) + 10%));
+            clip-path: polygon(0 0, 100% 0, 100% var(--clip-place), 0 var(--clip-place));
         }
 
         &--svg {
