@@ -235,7 +235,6 @@ function roadmapArrow() {
     let result = currentProgress / daysLength * 100;
 
     roadmapInner.style.setProperty('--arrow-height', result + '%');
-    roadmapInner.style.setProperty('--clip-place', result + 10 + '%');
 
     roadmapInner.querySelectorAll('.ellipse').forEach(ellipse => {
         

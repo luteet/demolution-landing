@@ -365,7 +365,7 @@
         }
 
         &.aos-animate &--svg._loaded {
-            clip-path: polygon(0 0, 100% 0, 100% var(--clip-place), 0 var(--clip-place));
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
 
         &--svg {
