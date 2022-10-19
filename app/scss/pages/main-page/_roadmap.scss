@@ -493,3 +493,26 @@
         }
     }
 }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    99% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(361deg);
+    }
+}
+.ellipse {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: rotate 10s linear 0s infinite normal forwards;
+}
+.ellipse._1 {
+    animation: rotate 13s linear 0s infinite normal forwards;
+}
+.ellipse._2 {
+    animation: rotate 11s linear 0s infinite normal forwards;
+}
